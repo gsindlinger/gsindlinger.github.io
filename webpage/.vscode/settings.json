@@ -2,8 +2,16 @@
 	"cssVariables.lookupFiles": ["**/*.css", "**/*.scss", "**/*.sass", "**/*.less"],
 	"editor.formatOnSave": true,
 	"[svelte]": {
-    	"editor.defaultFormatter": "esbenp.prettier-vscode"
-  	},
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
 	"prettier.singleQuote": true,
 	"frontMatter.preview.host": "http://localhost:5173/",
 	"frontMatter.framework.startCommand": "npm run dev",

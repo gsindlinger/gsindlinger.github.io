@@ -10,23 +10,22 @@
 		<FooterWave />
 	</div>
 	<div class="content">
+		<div class="socials">
+			<Socials />
+		</div>
 		<div class="copyright">
-			This template was built by <a
+			© {new Date().getFullYear()} Johannes Gabriel Sindlinger
+		</div>
+		<div class="credits">
+			Template by <a
 				href="https://fantinel.dev?utm_source=site-template"
 				target="_blank"
 				rel="noopener noreferrer">Matheus Fantinel</a
 			>.
-		</div>
-		<div class="credits">
 			Powered by <a href="https://kit.svelte.dev/" target="_blank" rel="noopener noreferrer"
 				>SvelteKit</a
 			>. Icons by
 			<a href="https://iconoir.com/" target="_blank" rel="noopener noreferrer">Iconoir</a>.
-		</div>
-		<div class="socials">
-			<Socials />
-			<RssLink />
-			<ThemeToggle />
 		</div>
 	</div>
 </footer>

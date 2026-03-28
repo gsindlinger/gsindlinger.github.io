@@ -1,20 +1,20 @@
 <script lang="ts">
 	export let id: string | undefined = undefined;
-	export let title: string | undefined = undefined;
 	export let description: string | undefined = undefined;
+	export let title: string | undefined = undefined;
 
 	export let align: 'left' | 'top' | 'right' = 'top';
+
+
 </script>
 
 <section {id} class="content-section {align}">
 	<div class="title-area">
 		{#if title || description}
 			<div class="text">
-				{#if title}
 					<h2>
 						{title}
 					</h2>
-				{/if}
 				{#if description}
 					<p>
 						{description}
@@ -40,12 +40,12 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		gap: 40px;
+		gap: 70px;
 		padding: 50px 0;
 
 		.title-area {
 			flex: 2;
-
+			color: var(--color--primary-tint);
 			display: flex;
 			flex-direction: column;
 			justify-content: center;

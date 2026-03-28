@@ -1,6 +1,7 @@
 <script lang="ts">
 	import BlogPostCard from '$lib/components/molecules/BlogPostCard.svelte';
 	import ContentSection from '$lib/components/organisms/ContentSection.svelte';
+	import WaveTitle from '$lib/components/organisms/WaveTitle.svelte';
 	import type { BlogPost } from '$lib/utils/types';
 
 	export let data: {
@@ -10,6 +11,7 @@
 	let { posts } = data;
 </script>
 
+<WaveTitle />
 <div class="container">
 	<ContentSection title="All Blog Posts">
 		<div class="grid">
@@ -29,6 +31,11 @@
 
 <style lang="scss">
 	@use '../../../lib/scss/_breakpoints' as *;
+
+	.container {
+		padding-top: 5rem;
+		padding-bottom: 2rem;
+	}
 
 	.grid {
 		width: 100%;

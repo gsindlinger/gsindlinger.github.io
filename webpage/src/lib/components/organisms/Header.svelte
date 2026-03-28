@@ -3,10 +3,9 @@
 	import PageStar from "$lib/icons/page-star.svelte";
 	import UserSquare from "$lib/icons/user-square.svelte";
 
-	export let showBackground = false;
 </script>
 
-<header class:has-background={showBackground}>
+<header>
 	<nav class="container">
 		<a class="logo" href="/" aria-label="Site logo">
 			<div>
@@ -33,6 +32,7 @@
 
 <style lang="scss">
 	@use '../../scss/_breakpoints' as *;
+
 
 	header {
 		position: absolute;

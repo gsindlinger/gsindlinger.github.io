@@ -4,9 +4,10 @@
 
 	import Button from '$lib/components/atoms/Button.svelte';
 	import Error from '$lib/icons/error.svelte';
+	import WaveTitle from '$lib/components/organisms/WaveTitle.svelte';
 </script>
 
-<Header showBackground />
+<Header/>
 
 <main>
 	<div class="error-page">

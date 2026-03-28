@@ -30,3 +30,14 @@
 </main>
 
 <Footer />
+
+
+<style lang="scss">
+	@use '../../lib/scss/_mixins' as *;
+
+
+	main {
+		z-index: 1;
+	}
+
+	</style>

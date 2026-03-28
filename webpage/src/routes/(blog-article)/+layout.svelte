@@ -47,6 +47,8 @@
 <div class="article-layout">
 	<Header />
 
+	<div id="header-background"></div>
+
 	<main>
 		<article id="article-content">
 			<div class="header">
@@ -90,6 +92,15 @@
 
 <style lang="scss">
 	@use '../../lib/scss/_mixins' as *;
+
+	.header-background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 300px;
+		background: linear-gradient(60deg, var(--color--waves-start) 0%, var(--color--waves-end) 100%);
+	}
 
 	.article-layout {
 		--body-background-color: var(--color--post-page-background);

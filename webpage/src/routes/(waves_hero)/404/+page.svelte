@@ -1,7 +1,11 @@
 <script>
 	import Button from '$lib/components/atoms/Button.svelte';
+	import WaveTitle from '$lib/components/organisms/WaveTitle.svelte';
 	import Error from '$lib/icons/error.svelte';
 </script>
+
+
+<WaveTitle />
 
 <div class="error-page">
 	<div class="container">

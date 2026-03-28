@@ -5,17 +5,21 @@
 export const siteBaseUrl = 'https://gsindlinger.github.io/gsindlinger/';
 
 export const keywords = [
-	'Svelte',
-	'SvelteKit',
-	'Template',
-	'Blog',
-	'Starter',
-	'Static Site'
+	'Johannes Gabriel Sindlinger',
+	'Gabriel Sindlinger',
+	'AI Researcher',
+	'KI Forscher',
+	'Artificial Intelligence',
+	'Natural Language Processing',
+	'Data Attribution',
+	'Large Language Models',
+	'Copyright',
+	'AI Safety'
 ];
 
 export const description =
-	"A light, neat, and easy-to-use SvelteKit template for your next website.";
+	"Johannes Gabriel Sindlinger is a PhD student in NLPnorth Lab at the IT University of Copenhagen, working on topics related to Data Attribution on Large Language Models and its application towards the domain of copyright & AI safety.";
 
-export const title = 'SvelteKit Static Blog Template';
+export const title = 'Johannes Gabriel Sindlinger';
 
 export const image = `${siteBaseUrl}/images/site-preview.png`;

@@ -9,23 +9,15 @@
 
 <div class="socials">
 	<a
-		href="#"
+		href="mailto:info@gsindlinger.com"
 		target="_blank"
 		rel="noopener noreferrer"
-		title="Say Hi on Telegram"
+		title="Send an email"
 	>
-		<TelegramIcon />
+		<EmailIcon />
 	</a>
 	<a
-		href="#"
-		target="_blank"
-		rel="me noreferrer"
-		title="Say Hi on Mastodon"
-	>
-		<MastodonIcon />
-	</a>
-	<a
-		href="#"
+		href="https://github.com/gsindlinger"
 		target="_blank"
 		rel="noopener noreferrer"
 		title="See my GitHub profile"
@@ -33,21 +25,14 @@
 		<GitHubIcon />
 	</a>
 	<a
-		href="#"
+		href="https://www.linkedin.com/in/gsindlinger/"
 		target="_blank"
 		rel="noopener noreferrer"
 		title="Connect on LinkedIn"
 	>
 		<LinkedInIcon />
 	</a>
-	<a
-		href="#"
-		target="_blank"
-		rel="noopener noreferrer"
-		title="Send an email"
-	>
-		<EmailIcon />
-	</a>
+
 </div>
 
 <style lang="scss">
@@ -59,7 +44,7 @@
 
 		a {
 			transition: all 0.2s ease-in-out;
-			width: 24px;
+			width: 40px;
 			color: var(--color--text);
 			fill: var(--color--text);
 
