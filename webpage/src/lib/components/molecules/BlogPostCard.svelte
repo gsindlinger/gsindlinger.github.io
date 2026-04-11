@@ -11,10 +11,12 @@
 	export let readingTime: string | undefined = undefined;
 
 	export let showImage = true;
+
+	$: postHref = slug.startsWith('#') ? slug : `/${slug.replace(/^\//, '')}`;
 </script>
 
 <Card
-	href="/{slug}"
+	href={postHref}
 	target="_self"
 	additionalClass="blog-post-card {!showImage || !coverImage ? 'no-image' : ''}"
 >

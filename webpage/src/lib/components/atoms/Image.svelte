@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { dev } from '$app/environment';
+	import { base } from '$app/paths';
 
 	export let src: string;
 	export let alt: string;
@@ -8,7 +9,8 @@
 	export let formats: string[] = ['avif', 'webp', 'png'];
 	export let widths: string[] | undefined = undefined;
 
-	$: fileName = src.split('.')[0];
+	$: resolvedSrc = src.startsWith('/') ? `${base}${src}` : src;
+	$: fileName = resolvedSrc.split('.')[0];
 
 	function buildSrcset() {
 		if (dev) return;
@@ -37,7 +39,14 @@
 	}
 </script>
 
-<img srcset={buildSrcset()} {src} {alt} loading="lazy" decoding="async" class:full-bleed={fullBleed} />
+<img
+	srcset={buildSrcset()}
+	src={resolvedSrc}
+	{alt}
+	loading="lazy"
+	decoding="async"
+	class:full-bleed={fullBleed}
+/>
 
 <style lang="scss">
 	img {

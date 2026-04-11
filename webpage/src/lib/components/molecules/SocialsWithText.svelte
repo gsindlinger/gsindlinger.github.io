@@ -109,7 +109,7 @@
 
 				span {
 					margin-left: 0;
-					font-size: 0.7rem;
+					font-size: 0.8rem;
 				}
 
 				:global(svg) {

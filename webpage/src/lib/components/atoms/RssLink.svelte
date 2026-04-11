@@ -1,9 +1,10 @@
 <script lang="ts">
-  import RssIcon from '$lib/icons/rss.svelte';
+	import { base } from '$app/paths';
+	import RssIcon from '$lib/icons/rss.svelte';
 </script>
 
-<a href="/rss.xml" target="_blank" rel="noopener noreferrer" title="Subscribe to my RSS Feed">
-  <RssIcon />
+<a href={`${base}/rss.xml`} target="_blank" rel="noopener noreferrer" title="Subscribe to my RSS Feed">
+	<RssIcon />
 </a>
 
 <style lang="scss">

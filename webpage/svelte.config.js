@@ -12,6 +12,9 @@ const extensions = ['.svelte', '.md'];
 const config = {
 	kit: {
 		adapter: adapter(),
+		paths: {
+			base: '/gsindlinger'
+		},
 		prerender: {
 			handleHttpError: 'warn'
 		}

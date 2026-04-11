@@ -21,10 +21,9 @@
 				href="https://fantinel.dev?utm_source=site-template"
 				target="_blank"
 				rel="noopener noreferrer">Matheus Fantinel</a
-			>.
-			Powered by <a href="https://kit.svelte.dev/" target="_blank" rel="noopener noreferrer"
-				>SvelteKit</a
-			>. Icons by
+			>. Powered by
+			<a href="https://kit.svelte.dev/" target="_blank" rel="noopener noreferrer">SvelteKit</a>.
+			Icons by
 			<a href="https://iconoir.com/" target="_blank" rel="noopener noreferrer">Iconoir</a>.
 		</div>
 	</div>
@@ -35,6 +34,7 @@
 		height: 340px;
 		width: 100%;
 		background: linear-gradient(60deg, var(--color--waves-start) 0%, var(--color--waves-end) 100%);
+		color: var(--color--text-inverse);
 		display: grid;
 		grid-template-rows: 120px 1fr;
 
@@ -50,7 +50,7 @@
 			.credits {
 				font-weight: 400;
 				font-size: 90%;
-				color: var(--color--text-shade);
+				color: rgba(var(--color--text-inverse-rgb), 0.82);
 			}
 
 			.socials {
@@ -61,9 +61,16 @@
 		}
 
 		a {
+			color: inherit;
+
 			&:hover {
 				filter: drop-shadow(0px 0px 3px var(--color--primary));
 			}
+		}
+
+		:global(.socials a) {
+			color: var(--color--text-inverse);
+			fill: var(--color--text-inverse);
 		}
 	}
 </style>

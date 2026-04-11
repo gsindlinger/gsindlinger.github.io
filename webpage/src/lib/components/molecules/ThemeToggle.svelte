@@ -86,7 +86,7 @@
 	.label {
 		transition: all 0.5s var(--ease-4);
 		text-transform: uppercase;
-		font-size: 0.6rem;
+		font-size: 0.75rem;
 		opacity: 0;
 		transform-origin: left;
 		transform: scaleX(0);

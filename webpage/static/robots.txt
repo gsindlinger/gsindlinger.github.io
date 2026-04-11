@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gsindlinger.github.io/gsindlinger/sitemap.xml

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { HttpRegex } from '$lib/utils/regex';
 
 	export let additionalClass: string | undefined = undefined;
@@ -7,10 +8,11 @@
 	const isExternalLink = !!href && HttpRegex.test(href);
 	export let target: '_self' | '_blank' = isExternalLink ? '_blank' : '_self';
 	export let rel = isExternalLink ? 'noopener noreferrer' : undefined;
+	$: resolvedHref = href?.startsWith('/') && !isExternalLink ? `${base}${href}` : href;
 
 	$: tag = href ? 'a' : 'article';
 	$: linkProps = {
-		href,
+		href: resolvedHref,
 		target,
 		rel
 	};

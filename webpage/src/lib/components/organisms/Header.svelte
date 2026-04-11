@@ -1,38 +1,31 @@
 <script lang="ts">
-	import MessageText from "$lib/icons/message-text.svelte";
+	import { base } from '$app/paths';
 	import PageStar from "$lib/icons/page-star.svelte";
 	import UserSquare from "$lib/icons/user-square.svelte";
-
 </script>
 
 <header>
 	<nav class="container">
-		<a class="logo" href="/" aria-label="Site logo">
+		<a class="logo" href={`${base}/`} aria-label="Site logo">
 			<div>
 				Johannes Gabriel Sindlinger
 			</div>
 		</a>
 		<div class="links">
-			<a href="/blog" class="header-item">
-				<div class="header-icon"><MessageText /></div>
-				<span>blog</span>
+			<a href={`${base}/projects`} class="header-item">
+				<div class="header-icon"><PageStar /></div>
+				<span>publications</span>
 			</a>
-			<a href="/projects" class="header-item">
-				<div class="header-icon"><PageStar/></div>
-				<span>
-					publications
-				</span>
-			</a>
-			<a href="/about" class="header-item">
+			<a href={`${base}/about`} class="header-item">
 				<div class="header-icon"><UserSquare /></div>
 				<span>cv</span>
+			</a>
 		</div>
 	</nav>
 </header>
 
 <style lang="scss">
 	@use '../../scss/_breakpoints' as *;
-
 
 	header {
 		position: absolute;
@@ -52,12 +45,11 @@
 			display: flex;
 			align-items: center;
 			gap: 30px;
-			
+
 			@include for-phone-only {
 				padding-left: 1.3rem;
 				padding-right: 1.3rem;
 			}
-
 		}
 
 		.logo {
@@ -85,8 +77,6 @@
 				flex-direction: column;
 				gap: 2px;
 			}
-
-			
 		}
 
 		.header-icon {
@@ -99,15 +89,14 @@
 			color: var(--color--primary-tint);
 			transition: color 0.3s ease;
 
-			svg {
+			:global(svg) {
 				width: 100%;
 				height: 100%;
-
 			}
-			  :global(svg path) {
+
+			:global(svg path) {
 				stroke: var(--color--primary-tint);
 			}
-			
 		}
 
 		.links {
@@ -122,8 +111,6 @@
 
 			a {
 				text-decoration: none;
-
-
 			}
 		}
 	}

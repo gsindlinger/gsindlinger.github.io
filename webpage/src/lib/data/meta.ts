@@ -22,4 +22,4 @@ export const description =
 
 export const title = 'Johannes Gabriel Sindlinger';
 
-export const image = `${siteBaseUrl}/images/site-preview.png`;
+export const image = new URL('images/site-preview.png', siteBaseUrl).toString();

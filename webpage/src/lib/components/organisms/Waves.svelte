@@ -1,7 +1,8 @@
 <script>
-
+	export let compact = false;
 </script>
-<div class="waves-container">
+
+<div class="waves-container" class:compact>
 	<svg
 		class="waves"
 		xmlns="http://www.w3.org/2000/svg"
@@ -46,6 +47,16 @@
 		position: relative;
 		width: 100%;
 		line-height: 0; // removes gap below SVG
+
+		@include for-phone-only {
+			padding-bottom: 1rem;
+		}
+
+		&.compact {
+			@include for-phone-only {
+				padding-bottom: 5rem;
+			}
+		}
 	}
 
 	.waves {
@@ -59,9 +70,15 @@
 		@include for-phone-only {
 			height: 110px;
 		}
+
+		.waves-container.compact & {
+			height: 70px;
+
+			@include for-phone-only {
+				height: 50px;
+			}
+		}
 	}
-
-
 
 	/* Animation */
 	.parallax > use {

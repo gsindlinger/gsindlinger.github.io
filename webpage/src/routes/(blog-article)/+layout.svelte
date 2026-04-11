@@ -1,10 +1,11 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import Header from '$lib/components/organisms/Header.svelte';
 	import Footer from '$lib/components/organisms/Footer.svelte';
 	import Tag from '$lib/components/atoms/Tag.svelte';
 	import dateformat from 'dateformat';
 
-	import { keywords, siteBaseUrl, title } from '$lib/data/meta';
+	import { image, keywords, siteBaseUrl, title } from '$lib/data/meta';
 	import type { BlogPost } from '$lib/utils/types';
 	import RelatedPosts from '$lib/components/organisms/RelatedPosts.svelte';
 	import Image from '$lib/components/atoms/Image.svelte';
@@ -22,26 +23,62 @@
 			metaKeywords = post.keywords.concat(metaKeywords);
 		}
 	}
+
+	function absoluteUrl(path: string) {
+		return new URL(path.replace(/^\//, ''), siteBaseUrl).toString();
+	}
+
+	$: canonicalUrl = new URL($page.url.pathname.replace(/^\//, ''), siteBaseUrl).toString();
+	$: pageTitle = post ? `${post.title} - ${title}` : title;
+	$: socialImage = post?.coverImage ? absoluteUrl(post.coverImage) : undefined;
+	$: articleSchema =
+		post &&
+		JSON.stringify({
+			'@context': 'https://schema.org',
+			'@type': 'BlogPosting',
+			headline: post.title,
+			description: post.excerpt,
+			url: canonicalUrl,
+			datePublished: post.date,
+			...(post.updated ? { dateModified: post.updated } : {}),
+			...(socialImage ? { image: [socialImage] } : {}),
+			author: {
+				'@type': 'Person',
+				name: 'Johannes Gabriel Sindlinger',
+				url: siteBaseUrl
+			},
+			publisher: {
+				'@type': 'Person',
+				name: 'Johannes Gabriel Sindlinger',
+				url: siteBaseUrl
+			},
+			...(post.tags?.length ? { keywords: post.tags.join(', ') } : {})
+		});
 </script>
 
 <svelte:head>
-	{#if post}
-		<meta name="keywords" content={metaKeywords.join(', ')} />
+	<meta name="keywords" content={metaKeywords.join(', ')} />
+	<meta name="robots" content="index,follow,max-image-preview:large" />
 
-		<meta name="description" content={post.excerpt} />
-		<meta property="og:description" content={post.excerpt} />
-		<meta name="twitter:description" content={post.excerpt} />
-		<link rel="canonical" href="{siteBaseUrl}/{post.slug}" />
+	<meta name="description" content={post?.excerpt ?? ''} />
+	<meta property="og:description" content={post?.excerpt ?? ''} />
+	<meta name="twitter:description" content={post?.excerpt ?? ''} />
+	<link rel="canonical" href={canonicalUrl} />
 
-		<title>{post.title} - {title}</title>
-		<meta property="og:title" content="{post.title} - {title}" />
-		<meta name="twitter:title" content="{post.title} - {title}" />
+	<title>{pageTitle}</title>
+	<meta property="og:title" content={pageTitle} />
+	<meta name="twitter:title" content={pageTitle} />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content={canonicalUrl} />
+	<meta name="twitter:card" content={socialImage ? 'summary_large_image' : 'summary'} />
+	<meta property="article:published_time" content={post?.date ?? ''} />
+	<meta property="article:modified_time" content={post?.updated ?? post?.date ?? ''} />
+	<meta property="og:image" content={socialImage ?? image} />
+	<meta name="twitter:image" content={socialImage ?? image} />
 
-		{#if post.coverImage}
-			<meta property="og:image" content="{siteBaseUrl}{post.coverImage}" />
-			<meta name="twitter:image" content="{siteBaseUrl}{post.coverImage}" />
-		{/if}
-	{/if}
+	<script type="application/ld+json">
+		{articleSchema ?? ''}
+	</script>
 </svelte:head>
 
 <div class="article-layout">

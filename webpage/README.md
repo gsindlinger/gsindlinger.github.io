@@ -1,3 +1,15 @@
+# TODOs
+
+- Waves on mobile devices
+- Using same icons on all pages
+- Add Scholar to the footer
+- Check for responsiveness
+- Check for SEO
+- Check for accessibility
+- Check for contrast / readability
+
+
+
 # SvelteKit Static Blog Template
 
 A lightweight and customizable template for blogs and portfolio websites, built with SvelteKit.

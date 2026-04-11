@@ -1,8 +1,4 @@
 <script>
-	import FeaturesIcon from '$lib/icons/features.svelte';
-	import GitHubIcon from '$lib/icons/socials/github.svelte';
-	import Button from '$lib/components/atoms/Button.svelte';
-	import Sparkles from '../atoms/Sparkles.svelte';
 	import Image from '../atoms/Image.svelte';
 	import Waves from './Waves.svelte';
 	import SocialsWithText from '../molecules/SocialsWithText.svelte';
@@ -49,21 +45,8 @@
 				><strong>MTB-News.de</strong></a
 			>
 			— the largest German-language mountain biking platform — where I cover news, events, and innovations
-			in the <strong>MTB</strong> world.
+			in the MTB world.
 		</p>
-	</div>
-
-	<div class="ctas">
-		<Sparkles>
-			<Button href="https://github.com/matfantinel/sveltekit-static-blog-template">
-				<GitHubIcon slot="icon" />
-				Source Code
-			</Button>
-		</Sparkles>
-		<Button color="primary" href="https://histoire-sveltekit-static-blog-template.vercel.app/">
-			<FeaturesIcon slot="icon" />
-			Components
-		</Button>
 	</div>
 </section>
 
@@ -76,8 +59,7 @@
 
 	@include for-phone-only {
 		.intro-socials {
-			height: 70px;
-			padding-top: 0.5rem;
+			display: none;
 		}
 	}
 
@@ -100,9 +82,9 @@
 
 		@include for-phone-only {
 			width: 80%;
-			padding-top: 0rem;
-			transform: scale(2);
-			max-width: 175px;
+			padding-top: 1rem;
+			transform: scale(2.3);
+			max-width: 160px;
 		}
 	}
 
@@ -127,7 +109,7 @@
 		position: relative;
 
 		@include for-phone-only {
-			padding-top: 3rem;
+			padding-top: 2rem;
 			padding-left: 1.3rem;
 		}
 
@@ -185,20 +167,10 @@
 				}
 			}
 		}
-
-		.ctas {
-			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
-			justify-content: center;
-			gap: 10px;
-			width: 100%;
-		}
 	}
 
 	#hero-subsection {
 		padding-top: 1rem;
-		padding-bottom: 3rem;
 		display: flex;
 		flex-direction: column;
 
@@ -212,14 +184,6 @@
 			@include for-phone-only {
 				font-size: 1rem;
 			}
-		}
-
-		.ctas {
-			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
-			justify-content: center;
-			gap: 20px;
 		}
 	}
 </style>
