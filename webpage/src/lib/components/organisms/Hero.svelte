@@ -66,8 +66,11 @@
 	#wave-background {
 		width: 100%;
 		height: 20vh;
-		max-height: 100px;
-		min-height: 100px;
+		height: 100px;
+
+		@include for-phone-only {
+			height: 60px;
+		}
 	}
 
 	.hero-image {
@@ -83,7 +86,7 @@
 		@include for-phone-only {
 			width: 80%;
 			padding-top: 1rem;
-			transform: scale(2.3);
+			transform: scale(2.6);
 			max-width: 160px;
 		}
 	}
@@ -154,6 +157,10 @@
 			display: flex;
 			height: 100%;
 			padding-bottom: 0.5rem;
+
+			@include for-phone-only {
+				font-size: 1.1rem;
+			}
 
 			&:has(.left) {
 				justify-content: flex-start;

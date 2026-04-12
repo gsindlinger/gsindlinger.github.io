@@ -1,18 +1,16 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import PageStar from "$lib/icons/page-star.svelte";
-	import UserSquare from "$lib/icons/user-square.svelte";
+	import PageStar from '$lib/icons/page-star.svelte';
+	import UserSquare from '$lib/icons/user-square.svelte';
 </script>
 
 <header>
 	<nav class="container">
 		<a class="logo" href={`${base}/`} aria-label="Site logo">
-			<div>
-				Johannes Gabriel Sindlinger
-			</div>
+			<div>Johannes Gabriel Sindlinger</div>
 		</a>
 		<div class="links">
-			<a href={`${base}/projects`} class="header-item">
+			<a href={`${base}/publications`} class="header-item">
 				<div class="header-icon"><PageStar /></div>
 				<span>publications</span>
 			</a>

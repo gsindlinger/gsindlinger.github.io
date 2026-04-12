@@ -68,7 +68,7 @@
 		display: block;
 
 		@include for-phone-only {
-			height: 110px;
+			height: 80px;
 		}
 
 		.waves-container.compact & {
