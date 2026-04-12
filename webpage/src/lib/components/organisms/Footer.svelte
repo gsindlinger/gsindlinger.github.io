@@ -1,0 +1,76 @@
+<script>
+	import FooterWave from '$lib/icons/footer-wave.svelte';
+	import Socials from '$lib/components/molecules/Socials.svelte';
+	import ThemeToggle from '$lib/components/molecules/ThemeToggle.svelte';
+	import RssLink from '$lib/components/atoms/RssLink.svelte';
+</script>
+
+<footer>
+	<div class="wave">
+		<FooterWave />
+	</div>
+	<div class="content">
+		<div class="socials">
+			<Socials />
+		</div>
+		<div class="copyright">
+			© {new Date().getFullYear()} Johannes Gabriel Sindlinger
+		</div>
+		<div class="credits">
+			Template by <a
+				href="https://fantinel.dev?utm_source=site-template"
+				target="_blank"
+				rel="noopener noreferrer">Matheus Fantinel</a
+			>. Powered by
+			<a href="https://kit.svelte.dev/" target="_blank" rel="noopener noreferrer">SvelteKit</a>.
+			Icons by
+			<a href="https://iconoir.com/" target="_blank" rel="noopener noreferrer">Iconoir</a>.
+		</div>
+	</div>
+</footer>
+
+<style lang="scss">
+	footer {
+		height: 340px;
+		width: 100%;
+		background: linear-gradient(60deg, var(--color--waves-start) 0%, var(--color--waves-end) 100%);
+		color: var(--color--text-inverse);
+		display: grid;
+		grid-template-rows: 120px 1fr;
+
+		.content {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 15px;
+			font-weight: 600;
+			text-align: center;
+
+			.credits {
+				font-weight: 400;
+				font-size: 90%;
+				color: rgba(var(--color--text-inverse-rgb), 0.82);
+			}
+
+			.socials {
+				display: flex;
+				align-items: center;
+				gap: 20px;
+			}
+		}
+
+		a {
+			color: inherit;
+
+			&:hover {
+				filter: drop-shadow(0px 0px 3px var(--color--primary));
+			}
+		}
+
+		:global(.socials a) {
+			color: var(--color--text-inverse);
+			fill: var(--color--text-inverse);
+		}
+	}
+</style>

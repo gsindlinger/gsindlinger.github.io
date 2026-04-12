@@ -1,9 +1,5 @@
 <script>
-	import '../app.css';
+	import '$lib/scss/global.scss';
 </script>
 
-<div>
-	<main>
-		<slot />
-	</main>
-</div>
+<slot />
