@@ -18,7 +18,7 @@ export const keywords = [
 ];
 
 export const description =
-	"Johannes Gabriel Sindlinger is a PhD student in NLPnorth Lab at the IT University of Copenhagen, working on topics related to Data Attribution on Large Language Models and its application towards the domain of copyright & AI safety.";
+	'PhD student at IT University of Copenhagen researching Data Attribution for Large Language Models and its implications for copyright & AI safety.';
 
 export const title = 'Johannes Gabriel Sindlinger';
 
