@@ -13,7 +13,7 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		paths: {
-			base: '/gsindlinger'
+			base: ''
 		},
 		prerender: {
 			handleHttpError: 'warn'

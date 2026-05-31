@@ -2,7 +2,7 @@
 // So they can be added as suffixes on different pages
 // Via <svelte:head>
 
-export const siteBaseUrl = 'https://gsindlinger.github.io/gsindlinger/';
+export const siteBaseUrl = 'https://gsindlinger.github.io/';
 
 export const keywords = [
 	'Johannes Gabriel Sindlinger',
@@ -14,11 +14,13 @@ export const keywords = [
 	'Data Attribution',
 	'Large Language Models',
 	'Copyright',
-	'AI Safety'
+	'AI Safety',
+	'Influence Functions',
+	'PhD Student',
 ];
 
 export const description =
-	'PhD student at IT University of Copenhagen researching Data Attribution for Large Language Models and its implications for copyright & AI safety.';
+	'I am a PhD student at IT University of Copenhagen studying Data Attribution for Large Language Models and its implications for copyright & AI safety.';
 
 export const title = 'Johannes Gabriel Sindlinger';
 
