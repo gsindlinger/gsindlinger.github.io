@@ -34,11 +34,12 @@
 		<p class="intro-text">
 			I'm a PhD student in <a href="https://nlpnorth.github.io"><strong>NLPnorth Lab</strong></a> at
 			the <a href="https://www.itu.dk"><strong>IT University of Copenhagen</strong></a> under the
-			supervision of <a href="https://annargrs.github.io"><strong>Anna Rogers</strong></a>. I am
-			working on topics related to <strong>Data Attribution</strong> on
-			<strong>Large Language Models</strong>
-			and its application towards the domain of <strong>copyright</strong> &
-			<strong>AI safety</strong>.
+			supervision of <a href="https://annargrs.github.io"><strong>Anna Rogers</strong></a>. I work
+			on <strong>Data Attribution</strong> for <strong>Large Language Models</strong> — identifying
+			which training data is responsible for a model's outputs — with a focus on gradient-based
+			methods like <strong>Influence Functions</strong>, addressing both their
+			<strong>theoretical foundations</strong>
+			and practical <strong>applications</strong> in NLP.
 		</p>
 		<p class="intro-text">
 			Additionally, since 2016, I'm an editor for <a href="https://www.mtb-news.de"

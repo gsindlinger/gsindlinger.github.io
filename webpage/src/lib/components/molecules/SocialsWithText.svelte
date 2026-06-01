@@ -19,7 +19,7 @@
 	</div>
 
 	<div class="socials-with-text">
-		<a href="#" target="_blank" rel="noopener noreferrer" title="See my Google Scholar profile">
+		<a href="https://scholar.google.com/citations?user=IST0MhQAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" title="See my Google Scholar profile">
 			<Scholar />
 			<span>Scholar</span>
 		</a>

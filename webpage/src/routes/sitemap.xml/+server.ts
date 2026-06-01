@@ -2,28 +2,21 @@ import { siteBaseUrl } from '$lib/data/meta';
 
 export const prerender = true;
 
-const staticRoutes = [
-	{ path: '', priority: '1.0', changefreq: 'weekly' },
-	{ path: 'publications', priority: '0.8', changefreq: 'monthly' },
-	{ path: 'about', priority: '0.8', changefreq: 'monthly' }
-];
+const staticRoutes = ['', 'publications', 'about'];
 
 export async function GET() {
 	const base = siteBaseUrl.replace(/\/$/, '');
 
 	const staticEntries = staticRoutes
 		.map(
-			({ path, priority, changefreq }) => `
-  <url>
-    <loc>${base}/${path}</loc>
-    <changefreq>${changefreq}</changefreq>
-    <priority>${priority}</priority>
+			(path) => `  <url>
+    <loc>${base}/${path}${path ? '/' : ''}</loc>
   </url>`
 		)
-		.join('');
+		.join('\n');
 
 	const body = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${staticEntries}
 </urlset>`;
 

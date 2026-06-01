@@ -5,6 +5,7 @@
 	import EmailIcon from '$lib/icons/socials/email.svelte';
 	import RssIcon from '$lib/icons/rss.svelte';
 	import MastodonIcon from '$lib/icons/socials/mastodon.svelte';
+	import Scholar from '$lib/icons/socials/scholar.svelte';
 </script>
 
 <div class="socials">
@@ -15,6 +16,14 @@
 		title="Send an email"
 	>
 		<EmailIcon />
+	</a>
+	<a
+		href="https://scholar.google.com/citations?user=IST0MhQAAAAJ&hl=en"
+		target="_blank"
+		rel="noopener noreferrer"
+		title="See my Google Scholar profile"
+	>
+		<Scholar />
 	</a>
 	<a
 		href="https://github.com/gsindlinger"

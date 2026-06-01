@@ -85,7 +85,7 @@
 	<meta property="og:image" content={image} />
 	<meta name="twitter:image" content={image} />
 	<meta name="twitter:card" content="summary_large_image" />
-	<script type="application/ld+json">{@html structuredData}</script>
+	{@html `<script type="application/ld+json">${structuredData}</script>`}
 </svelte:head>
 
 <Header />

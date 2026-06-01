@@ -77,9 +77,10 @@
 				<div class="sidebar-section">
 					<h3>Research Interests</h3>
 					<ul class="interest-list">
+						<li>AI Interpretability</li>
 						<li>Data Attribution</li>
-						<li>NLP Interpretability</li>
-						<li>AI Safety &amp; Copyright</li>
+						<li>Influence Functions</li>
+						<li>NLP</li>
 					</ul>
 				</div>
 
