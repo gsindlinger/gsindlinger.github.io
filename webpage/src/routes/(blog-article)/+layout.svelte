@@ -76,9 +76,9 @@
 	<meta property="og:image" content={socialImage ?? image} />
 	<meta name="twitter:image" content={socialImage ?? image} />
 
-	<script type="application/ld+json">
-		{articleSchema ?? ''}
-	</script>
+	{#if articleSchema}
+		<script type="application/ld+json">{@html articleSchema}</script>
+	{/if}
 </svelte:head>
 
 <div class="article-layout">
