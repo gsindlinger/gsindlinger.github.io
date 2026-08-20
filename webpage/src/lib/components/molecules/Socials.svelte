@@ -1,10 +1,7 @@
 <script>
-	import TelegramIcon from '$lib/icons/socials/telegram.svelte';
 	import GitHubIcon from '$lib/icons/socials/github.svelte';
 	import LinkedInIcon from '$lib/icons/socials/linkedin.svelte';
 	import EmailIcon from '$lib/icons/socials/email.svelte';
-	import RssIcon from '$lib/icons/rss.svelte';
-	import MastodonIcon from '$lib/icons/socials/mastodon.svelte';
 	import Scholar from '$lib/icons/socials/scholar.svelte';
 </script>
 
@@ -34,14 +31,13 @@
 		<GitHubIcon />
 	</a>
 	<a
-		href="https://www.linkedin.com/in/gsindlinger/"
+		href="https://www.linkedin.com/in/gabriel-sindlinger/"
 		target="_blank"
 		rel="noopener noreferrer"
 		title="Connect on LinkedIn"
 	>
 		<LinkedInIcon />
 	</a>
-
 </div>
 
 <style lang="scss">
@@ -54,8 +50,8 @@
 		a {
 			transition: all 0.2s ease-in-out;
 			width: 40px;
-			color: var(--color--text);
-			fill: var(--color--text);
+			color: var(--color--text-inverse);
+			fill: var(--color--text-inverse);
 
 			&:hover {
 				color: var(--color--primary);

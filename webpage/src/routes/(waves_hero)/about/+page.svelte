@@ -52,7 +52,7 @@
 						gsindlinger
 					</a>
 					<a
-						href="https://www.linkedin.com/in/gsindlinger/"
+						href="https://www.linkedin.com/in/gabriel-sindlinger/"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="sidebar-link"

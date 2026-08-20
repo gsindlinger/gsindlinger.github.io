@@ -2,11 +2,11 @@
 
 @mixin base-theme {
 	@include define-color('primary', #6E29E7);
-	@include define-color('primary-shade', #b28cf2);	
+	@include define-color('primary-shade', #b28cf2);
 	@include define-color('primary-tint', #f9f6fe);
 
 	@include define-color('secondary', #c2410c);
-	@include define-color('secondary-shade', #e48b67);
+	@include define-color('secondary-shade', #E37466);
 	@include define-color('secondary-tint', #fff8f5);
 
 	@include define-color('yellow', #ffd400);
@@ -36,8 +36,8 @@
 	@include define-color('code-text', #ffffff);
 	@include define-color('code-inline-background', #e3e3e3);
 
-	--color--waves-start: rgba(var(--color--text-rgb), 0.9);
-	--color--waves-end: rgba(var(--color--text-rgb), 0.6);
+	--color--waves-start: rgba(var(--color--text-rgb), 1);
+	--color--waves-end: rgba(var(--color--text-rgb), 0.5);
 
 	--card-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
 	--card-shadow-hover: 0px 4px 10px 8px rgb(0 0 0 / 10%);
@@ -46,7 +46,7 @@
 
 @mixin dark-theme {
 	@include define-color('primary', #9f67ff);
-	@include define-color('primary-shade', #4612A1);	
+	@include define-color('primary-shade', #4612A1);
 	@include define-color('primary-tint', #231934);
 
 	@include define-color('secondary', #ff723f);

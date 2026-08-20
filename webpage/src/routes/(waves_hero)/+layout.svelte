@@ -66,7 +66,7 @@
 					'https://pure.itu.dk/en/persons/johannes-gabriel-sindlinger/',
 					'https://orcid.org/0009-0002-4055-3470',
 					'https://github.com/gsindlinger',
-					'https://www.linkedin.com/in/gsindlinger/'
+					'https://www.linkedin.com/in/gabriel-sindlinger/'
 				],
 				knowsAbout: keywords.slice(2)
 			}

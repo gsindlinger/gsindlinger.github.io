@@ -127,7 +127,7 @@
 		}
 
 		.hello-secondary {
-			color: var(--color--secondary);
+			color: var(--color--primary-shade);
 		}
 
 		.intro {

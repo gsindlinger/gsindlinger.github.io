@@ -44,7 +44,7 @@
 
 	<div class="socials-with-text">
 		<a
-			href="https://www.linkedin.com/in/gsindlinger/"
+			href="https://www.linkedin.com/in/gabriel-sindlinger/"
 			target="_blank"
 			rel="noopener noreferrer"
 			title="Connect on LinkedIn"
