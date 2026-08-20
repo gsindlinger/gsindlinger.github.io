@@ -111,6 +111,7 @@
 		align-items: center;
 		gap: 15px;
 		position: relative;
+		color: var(--color--text-inverse);
 
 		@include for-phone-only {
 			padding-top: 2rem;

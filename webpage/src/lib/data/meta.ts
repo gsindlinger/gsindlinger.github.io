@@ -7,6 +7,7 @@ export const siteBaseUrl = 'https://gsindlinger.github.io/';
 export const keywords = [
 	'Johannes Gabriel Sindlinger',
 	'Gabriel Sindlinger',
+	'Johannes Sindlinger',
 	'AI Researcher',
 	'KI Forscher',
 	'Artificial Intelligence',

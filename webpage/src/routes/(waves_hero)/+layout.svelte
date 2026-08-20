@@ -53,14 +53,21 @@
 			},
 			{
 				'@type': 'Person',
+				'@id': `${siteBaseUrl}#person`,
 				name: title,
+				alternateName: 'Johannes Sindlinger',
 				url: siteBaseUrl,
 				jobTitle: 'PhD Student',
 				affiliation: {
 					'@type': 'CollegeOrUniversity',
 					name: 'IT University of Copenhagen'
 				},
-				sameAs: ['https://github.com/gsindlinger', 'https://www.linkedin.com/in/gsindlinger/'],
+				sameAs: [
+					'https://pure.itu.dk/en/persons/johannes-gabriel-sindlinger/',
+					'https://orcid.org/0009-0002-4055-3470',
+					'https://github.com/gsindlinger',
+					'https://www.linkedin.com/in/gsindlinger/'
+				],
 				knowsAbout: keywords.slice(2)
 			}
 		]
