@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { newsItems } from '$lib/data/news';
 </script>
 
@@ -8,13 +9,36 @@
 		{#each newsItems as item}
 			<div class="news-item">
 				<span class="date">{item.date}</span>
-				<p class="content">
-					{#if item.link}
-						<a href={item.link} target="_blank" rel="noopener noreferrer">{item.content}</a>
-					{:else}
-						{item.content}
+				<div class="content">
+					<p>{@html item.content}</p>
+					{#if item.links?.length}
+						<p class="attachments">
+							{#each item.links as link}
+								<a
+									class="attachment"
+									href={`${base}${link.href}`}
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										aria-hidden="true"
+										><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline
+											points="7 10 12 15 17 10"
+										/><line x1="12" y1="15" x2="12" y2="3" /></svg
+									>
+									{link.label}
+								</a>
+							{/each}
+						</p>
 					{/if}
-				</p>
+				</div>
 			</div>
 		{/each}
 	</div>
@@ -85,9 +109,12 @@
 		font-size: 0.95rem;
 		line-height: 1.6;
 		color: var(--color--text);
-		margin: 0;
 
-		a {
+		p {
+			margin: 0;
+		}
+
+		:global(a) {
 			color: var(--color--primary);
 			text-decoration: underline;
 			text-underline-offset: 3px;
@@ -95,6 +122,36 @@
 			&:hover {
 				color: var(--color--secondary);
 			}
+		}
+	}
+
+	.attachments {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin-top: 0.5rem !important;
+	}
+
+	.attachment {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.35rem;
+		font-size: 0.8rem;
+		font-weight: 600;
+		padding: 0.2rem 0.6rem;
+		border: 1px solid rgba(var(--color--primary-rgb), 0.35);
+		border-radius: 999px;
+		text-decoration: none !important;
+		transition: background 0.15s ease, border-color 0.15s ease;
+
+		&:hover {
+			background: rgba(var(--color--primary-rgb), 0.1);
+			border-color: var(--color--primary);
+		}
+
+		svg {
+			width: 0.9em;
+			height: 0.9em;
 		}
 	}
 </style>
