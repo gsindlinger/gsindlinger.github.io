@@ -14,6 +14,15 @@ export interface NewsItem {
 /** Newest first — add new entries at the top. */
 export const newsItems: NewsItem[] = [
 	{
+		date: 'Oct 9, 2026',
+		content:
+			'Attended <a href="https://d3aconference.dk" target="_blank" rel="noopener noreferrer">D3A 4.0</a>, the Danish Digitalization, Data Science and AI conference, in Nyborg, Denmark. Presented a poster on our upcoming paper <em>Under the Influence – of What? A Controlled Evaluation of Influence Functions</em> (preprint soon) and gave a lightning talk on data attribution at the <a href="https://d3aconference.dk/interpretability-in-the-lab-and-in-the-wild/" target="_blank" rel="noopener noreferrer">Interpretability in the Lab and in the Wild</a> workshop.',
+		links: [
+			{ label: 'Poster (PDF)', href: '/files/poster-d3a-2026.pdf' },
+			{ label: 'Slides (PDF)', href: '/files/talk-d3a-2026.pdf' }
+		]
+	},
+	{
 		date: 'Sep 11, 2026',
 		content:
 			'Attended <a href="https://mlss2026.is.tuebingen.mpg.de" target="_blank" rel="noopener noreferrer">MLSS 2026</a> in Tübingen, Germany, with many interesting lectures from leading researchers, and presented my ongoing work as a poster.',
